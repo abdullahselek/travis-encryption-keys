@@ -8,12 +8,16 @@ env:
   - PROJECT=TravisEncryptionKeys.xcodeproj
   - SCHEME=TravisEncryptionKeys
   - SDK=iphonesimulator10.3
+  - secure: "Hlq/UjD9FMdFjDETgvzs7lvXVPpxRX7AmHNrGJCgBy6yqAvoH2toDiCQrCgqYKKhRtr3qsrABCI208AmhCnd/sUtotMkeVj6Gbb4mkMoI8NavGHaMBfL5ab2gnanlE5i9FmaCky7fKU9Fuxuu1nSmWeudksvR1Wg6Ct+GgZH3AKl+VrOuJNmn3KZ8TK+CEezQWTIvGQ5YdCUCNH0KDQ86cpTUeN2woPamyYzniYvKPAvmDUK6vzdeRnAzfcKg6whz2EflW+c7eMRJhzIhkEJi8HyaPZe/7+6ueSFBLAA5WrX4n3eU2wFcSPtaNWN0nTXysRwCWe9FE4Cp8A7gGaBljaIKgL3DmtTEk0TLl+IIfrlIoxSH/vSUlA/5oy8dUZ0KZ9R7EEYAqIw2BnXMPyPrxobB3xfFt4nG+7+yhcTmlGkYVrhgjmNqI6e32v+69qlSgWoxT/9Bk5CIW8kULaUblOwCH0GvktnxcWtnHKciqW+NTIwC5S4qIiTucK+HQejCfGNYab+Fe6Rv9u845+DzEQI4CzEXjUbRiMY+Vvc7ukzdxd4aRGCcY0curBAP5VcGRYkT4BHOFFR7hRjyu/7ihcua271WyjE01Z3w7n+yuSAEm/rJTiW/3PRtHqIoRA92kCQ+SVKmkGKQjfNgMPdcG83WmRyqACW/vz3c9k0OCc="
   matrix:
     - DESTINATION="OS=10.3,name=iPhone SE"     SCHEME="$SCHEME"     SDK="$SDK"     RUN_TESTS="NO" POD_LINT="NO"
     - DESTINATION="OS=9.0,name=iPhone 6"       SCHEME="$SCHEME"     SDK="$SDK"     RUN_TESTS="NO" POD_LINT="NO"
 branches:
  only:
  - master
+
+before_script:
+  - wget "$URL" -O travis-encryption-keys.tar.gz
 
 before_install:
   - rm -rf /Users/travis/Library/Developer/Xcode/DerivedData/TravisEncryptionKeys-*/
