@@ -8,7 +8,7 @@ env:
   - PROJECT=TravisEncryptionKeys.xcodeproj
   - SCHEME=TravisEncryptionKeys
   - SDK=iphonesimulator10.3
-  - secure: "Hlq/UjD9FMdFjDETgvzs7lvXVPpxRX7AmHNrGJCgBy6yqAvoH2toDiCQrCgqYKKhRtr3qsrABCI208AmhCnd/sUtotMkeVj6Gbb4mkMoI8NavGHaMBfL5ab2gnanlE5i9FmaCky7fKU9Fuxuu1nSmWeudksvR1Wg6Ct+GgZH3AKl+VrOuJNmn3KZ8TK+CEezQWTIvGQ5YdCUCNH0KDQ86cpTUeN2woPamyYzniYvKPAvmDUK6vzdeRnAzfcKg6whz2EflW+c7eMRJhzIhkEJi8HyaPZe/7+6ueSFBLAA5WrX4n3eU2wFcSPtaNWN0nTXysRwCWe9FE4Cp8A7gGaBljaIKgL3DmtTEk0TLl+IIfrlIoxSH/vSUlA/5oy8dUZ0KZ9R7EEYAqIw2BnXMPyPrxobB3xfFt4nG+7+yhcTmlGkYVrhgjmNqI6e32v+69qlSgWoxT/9Bk5CIW8kULaUblOwCH0GvktnxcWtnHKciqW+NTIwC5S4qIiTucK+HQejCfGNYab+Fe6Rv9u845+DzEQI4CzEXjUbRiMY+Vvc7ukzdxd4aRGCcY0curBAP5VcGRYkT4BHOFFR7hRjyu/7ihcua271WyjE01Z3w7n+yuSAEm/rJTiW/3PRtHqIoRA92kCQ+SVKmkGKQjfNgMPdcG83WmRyqACW/vz3c9k0OCc="
+  - secure: "OH2qU6sSzXOdlKCpdTCvGeR73BLEPfJMNxSOMzloVH3dapbnSq1pyq+5gO8o6Z0b9p0EM2NlUFi+l6aYCsqyZIigpumKE2UxY3GLAz+a2WGPDR6SzNk7U7GSG4VSQlOGq7wn4cDb3Clg0XYuc9XfCQThjYt1bVEm0vTVknG5Mch51xqz21s04VC8asI7tBHgGfmhr1CZ0si1toZcbw996i265701WqT9Su95eBabl5/1SImHfzK7Sg0sG3f/0RdGpcyKYG6IMQ7++23Y1xfAZoAg/BfYq1XqkHU/SDgrSAG22jlpDGx//UubDl6WWkP/RW0HJ9sfaLVtC2Awb0EOZPlqsmTZADFGHYXRVO2aV4dNj3JdPvX+naCjZJa4dRjCjOvEa1yMBnNZkkv4BwsZyAkUIy7QYZSiBj5RV8SbcdxA1YsgyAVZS4/FSlUCuvi640+EGMunHLi0bH9Y8Bgr5ISMkpyUvGWUMOo5dGVw6mH18dvJFU9oCvkGnqqJ39DHR71+1R85bCNhD0kqRzf9cUziZOryikzxQLfpTsj0do7gMf/hpQngQUU3suBFfsB256rdpVNLdYMjYOBUqS4o1ik46ZLmaewlN8xbMb/Z63HqO1myl189Qzw5Btf7q6MZn8qDJOZdy+wBcfCboXg92SfT1lQI+La/HVouWtd6zpg="
   matrix:
     - DESTINATION="OS=10.3,name=iPhone SE"     SCHEME="$SCHEME"     SDK="$SDK"     RUN_TESTS="NO" POD_LINT="NO"
     - DESTINATION="OS=9.0,name=iPhone 6"       SCHEME="$SCHEME"     SDK="$SDK"     RUN_TESTS="NO" POD_LINT="NO"
@@ -17,8 +17,8 @@ branches:
  - master
 
 before_script:
-  - wget "$URL" -q -O travis-encryption-keys.tar.gz
-  # - tar -xvf travis-encryption-keys.tar.gz
+  - wget "$URL" -O AFNetworking.tar.gz
+  - tar -xzf AFNetworking.tar.gz
 
 before_install:
   - rm -rf /Users/travis/Library/Developer/Xcode/DerivedData/TravisEncryptionKeys-*/
