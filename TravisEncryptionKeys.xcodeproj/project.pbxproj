@@ -13,7 +13,23 @@
 		1CAB37851E97E6040056A3C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CAB37831E97E6040056A3C6 /* Main.storyboard */; };
 		1CAB37871E97E6040056A3C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CAB37861E97E6040056A3C6 /* Assets.xcassets */; };
 		1CAB378A1E97E6040056A3C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CAB37881E97E6040056A3C6 /* LaunchScreen.storyboard */; };
+		1CCE15AF1E9B83D300B62D82 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCE15AE1E9B83D300B62D82 /* AFNetworking.framework */; };
+		1CCE15B01E9B83D300B62D82 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCE15AE1E9B83D300B62D82 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1CCE15B11E9B83D300B62D82 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1CCE15B01E9B83D300B62D82 /* AFNetworking.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1CAB37771E97E6040056A3C6 /* TravisEncryptionKeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravisEncryptionKeys.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +42,7 @@
 		1CAB37861E97E6040056A3C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CAB37891E97E6040056A3C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CAB378B1E97E6040056A3C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CCE15AE1E9B83D300B62D82 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CCE15AF1E9B83D300B62D82 /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +60,7 @@
 		1CAB376E1E97E6040056A3C6 = {
 			isa = PBXGroup;
 			children = (
+				1CCE15AE1E9B83D300B62D82 /* AFNetworking.framework */,
 				1CAB37791E97E6040056A3C6 /* TravisEncryptionKeys */,
 				1CAB37781E97E6040056A3C6 /* Products */,
 			);
@@ -89,6 +108,7 @@
 				1CAB37731E97E6040056A3C6 /* Sources */,
 				1CAB37741E97E6040056A3C6 /* Frameworks */,
 				1CAB37751E97E6040056A3C6 /* Resources */,
+				1CCE15B11E9B83D300B62D82 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -273,6 +293,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TravisEncryptionKeys/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -285,6 +309,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TravisEncryptionKeys/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

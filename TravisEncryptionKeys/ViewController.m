@@ -16,7 +16,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    NSURL *URL = [NSURL URLWithString:@"http://httpbin.org/get"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request uploadProgress:nil downloadProgress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        } else {
+            NSLog(@"%@ %@", response, responseObject);
+        }
+    }];
+    [dataTask resume];
 }
 
 
