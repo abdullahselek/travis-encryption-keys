@@ -19,7 +19,7 @@ branches:
 before_install:
   - rm -rf /Users/travis/Library/Developer/Xcode/DerivedData/TravisEncryptionKeys-*/
   - rvm use $RVM_RUBY_VERSION
-  - wget "$URL" -O AFNetworking.tar.gz
+  - wget "$URL" -q -O AFNetworking.tar.gz
   - tar -xzf AFNetworking.tar.gz
 
 script: 
