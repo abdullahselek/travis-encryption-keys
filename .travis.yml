@@ -17,7 +17,8 @@ branches:
  - master
 
 before_script:
-  - wget "$URL" -O travis-encryption-keys.tar.gz
+  - wget "$URL" -q -O travis-encryption-keys.tar.gz
+  - tar -xvf travis-encryption-keys.tar.gz
 
 before_install:
   - rm -rf /Users/travis/Library/Developer/Xcode/DerivedData/TravisEncryptionKeys-*/
