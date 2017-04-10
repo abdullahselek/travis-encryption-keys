@@ -22,8 +22,6 @@ before_script:
 before_install:
   - rm -rf /Users/travis/Library/Developer/Xcode/DerivedData/TravisEncryptionKeys-*/
   - rvm use $RVM_RUBY_VERSION
-  - brew update
-  - brew install wget
 
 script: 
   - set -o pipefail
