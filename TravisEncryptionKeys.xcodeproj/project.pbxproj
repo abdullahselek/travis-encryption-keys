@@ -15,6 +15,7 @@
 		1CAB378A1E97E6040056A3C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CAB37881E97E6040056A3C6 /* LaunchScreen.storyboard */; };
 		1CCE15AF1E9B83D300B62D82 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCE15AE1E9B83D300B62D82 /* AFNetworking.framework */; };
 		1CCE15B01E9B83D300B62D82 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCE15AE1E9B83D300B62D82 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6200868DF51D44148FEA0ABC /* Pods_TravisEncryptionKeys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D843DFAFF5D972D9C51AB1 /* Pods_TravisEncryptionKeys.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,9 @@
 		1CAB37891E97E6040056A3C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CAB378B1E97E6040056A3C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CCE15AE1E9B83D300B62D82 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = "<group>"; };
+		A3D843DFAFF5D972D9C51AB1 /* Pods_TravisEncryptionKeys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravisEncryptionKeys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADE0A5A3C2933EACCF70EB08 /* Pods-TravisEncryptionKeys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravisEncryptionKeys.release.xcconfig"; path = "Pods/Target Support Files/Pods-TravisEncryptionKeys/Pods-TravisEncryptionKeys.release.xcconfig"; sourceTree = "<group>"; };
+		DBFCD9250C70D97F0154BE8A /* Pods-TravisEncryptionKeys.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravisEncryptionKeys.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravisEncryptionKeys/Pods-TravisEncryptionKeys.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CCE15AF1E9B83D300B62D82 /* AFNetworking.framework in Frameworks */,
+				6200868DF51D44148FEA0ABC /* Pods_TravisEncryptionKeys.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +68,8 @@
 				1CCE15AE1E9B83D300B62D82 /* AFNetworking.framework */,
 				1CAB37791E97E6040056A3C6 /* TravisEncryptionKeys */,
 				1CAB37781E97E6040056A3C6 /* Products */,
+				7A1DF9B3ECAF380A6371B4AA /* Pods */,
+				AFB0D63DC2E13D5BB9BC429A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +105,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7A1DF9B3ECAF380A6371B4AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DBFCD9250C70D97F0154BE8A /* Pods-TravisEncryptionKeys.debug.xcconfig */,
+				ADE0A5A3C2933EACCF70EB08 /* Pods-TravisEncryptionKeys.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AFB0D63DC2E13D5BB9BC429A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3D843DFAFF5D972D9C51AB1 /* Pods_TravisEncryptionKeys.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,10 +129,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1CAB378E1E97E6040056A3C6 /* Build configuration list for PBXNativeTarget "TravisEncryptionKeys" */;
 			buildPhases = (
+				D9DD55C788CB8D372B8EF3AA /* [CP] Check Pods Manifest.lock */,
 				1CAB37731E97E6040056A3C6 /* Sources */,
 				1CAB37741E97E6040056A3C6 /* Frameworks */,
 				1CAB37751E97E6040056A3C6 /* Resources */,
 				1CCE15B11E9B83D300B62D82 /* Embed Frameworks */,
+				BEC0832AA8ED6F901DB777BE /* [CP] Embed Pods Frameworks */,
+				DAD442B4C00B94D4DCC20736 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -163,6 +190,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BEC0832AA8ED6F901DB777BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravisEncryptionKeys/Pods-TravisEncryptionKeys-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9DD55C788CB8D372B8EF3AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DAD442B4C00B94D4DCC20736 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravisEncryptionKeys/Pods-TravisEncryptionKeys-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1CAB37731E97E6040056A3C6 /* Sources */ = {
@@ -291,6 +366,7 @@
 		};
 		1CAB378F1E97E6040056A3C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBFCD9250C70D97F0154BE8A /* Pods-TravisEncryptionKeys.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -307,6 +383,7 @@
 		};
 		1CAB37901E97E6040056A3C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADE0A5A3C2933EACCF70EB08 /* Pods-TravisEncryptionKeys.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
